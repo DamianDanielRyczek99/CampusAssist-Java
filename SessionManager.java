@@ -48,12 +48,12 @@ public class SessionManager {
         for (Student s : students) {
             if (s.getUsername().equalsIgnoreCase(username) && s.login(password)) {
                 currentStudent = s;
-                System.out.println("✅ Login successful! Welcome, " + username + "!");
+                System.out.println("Login successful! Welcome, " + username + "!");
                 return;
             }
         }
 
-        System.out.println("❌ Login failed. Invalid credentials.");
+        System.out.println("Login failed. Invalid credentials.");
     }
 
     /**
@@ -79,7 +79,7 @@ public class SessionManager {
                 case 1 -> requestSession();
                 case 2 -> viewAppointments();
                 case 3 -> provideFeedback();
-                case 4 -> System.out.println("👋 Logging out. Goodbye!");
+                case 4 -> System.out.println("Logging out. Goodbye!");
                 default -> System.out.println("Invalid choice. Please try again.");
             }
 
